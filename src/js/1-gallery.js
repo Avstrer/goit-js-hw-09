@@ -70,16 +70,17 @@ function createGallery(collection) {
     .map(item => {
       const { preview, original, description } = item;
       return `<li class="gallery-item">
-       <a class="gallery-link" href="${original}">
-       <img
-         class="gallery-image"
-         src="${preview}"
-         alt=$"${description}"
-       />
-       </a>
-       </li>`;
+      <a class="gallery-link" href="${original}">
+        <img
+          class="gallery-image"
+          src="${preview}"
+          alt="${description}"
+        />
+      </a>
+    </li>`;
     })
     .join('');
+
   return markup;
 }
 
@@ -92,4 +93,4 @@ gallery.insertAdjacentHTML('beforeend', galleryHTML);
 import SimpleLightbox from 'simplelightbox/dist/simple-lightbox.esm';
 import 'simplelightbox/dist/simple-lightbox.css';
 
-const lightbox = new SimpleLightbox('.gallery img');
+const lightbox = new SimpleLightbox('.gallery a');
