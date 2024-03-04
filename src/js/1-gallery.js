@@ -90,7 +90,12 @@ const galleryHTML = createGallery(images);
 
 gallery.insertAdjacentHTML('beforeend', galleryHTML);
 
-import SimpleLightbox from 'simplelightbox/dist/simple-lightbox.esm';
+import SimpleLightbox from 'simplelightbox';
+
 import 'simplelightbox/dist/simple-lightbox.css';
 
-const lightbox = new SimpleLightbox('.gallery a');
+const lightbox = new SimpleLightbox('.gallery a', {
+  caption: true,
+  captionsData: 'alt',
+  captionDelay: 250,
+});
