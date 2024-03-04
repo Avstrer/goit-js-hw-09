@@ -1,3 +1,7 @@
+import SimpleLightbox from 'simplelightbox';
+
+import 'simplelightbox/dist/simple-lightbox.min.css';
+
 const images = [
   {
     preview:
@@ -89,10 +93,6 @@ const galleryHTML = createGallery(images);
 // -----------------------------------------------------
 
 gallery.insertAdjacentHTML('beforeend', galleryHTML);
-
-import SimpleLightbox from 'simplelightbox';
-
-import 'simplelightbox/dist/simple-lightbox.css';
 
 const lightbox = new SimpleLightbox('.gallery a', {
   caption: true,

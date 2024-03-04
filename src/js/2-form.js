@@ -25,7 +25,7 @@ function submitListenerFunction(event) {
 
   // console.log(event);
 
-  if (elements.message.value === ''.trim()) {
+  if (elements.message.value.trim() === ''()) {
     alert('All emenents should include text');
   }
 
