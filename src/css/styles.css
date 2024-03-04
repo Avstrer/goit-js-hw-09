@@ -50,3 +50,25 @@ button:hover,
 button:active {
   background-color: #6c8cff;
 }
+.gallery {
+  display: flex;
+  width: 1440px;
+  height: 696px;
+  padding: 24px 156px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+.gallery-item {
+  width: calc((100% - 48px) / 3);
+}
+span {
+  color: #2e2f42;
+  font-size: 20px;
+  margin-left: 10px;
+  margin-right: auto;
+}

@@ -16,11 +16,11 @@ if (parsedFeedback !== null) {
   elements.message.value = parsedFeedback.message || '';
 }
 
-form.addEventListener('submit', formListenerFunction);
+form.addEventListener('submit', submitListenerFunction);
 
 form.addEventListener('input', inputListenerFunction);
 
-function formListenerFunction(event) {
+function submitListenerFunction(event) {
   event.preventDefault();
 
   // console.log(event);
@@ -32,7 +32,7 @@ function formListenerFunction(event) {
   reviewInfo.email = elements.email.value.trim();
   reviewInfo.message = elements.message.value.trim();
 
-  // console.log(reviewInfo);
+  console.log(reviewInfo);
 
   localStorage.removeItem('feedback-form-state');
   form.reset();
