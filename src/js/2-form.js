@@ -25,17 +25,20 @@ function submitListenerFunction(event) {
 
   // console.log(event);
 
-  if (elements.message.value.trim() === '') {
+  if (
+    elements.message.value.trim() === '' ||
+    elements.email.value.trim() === ''
+  ) {
     alert('All emenents should include text');
+  } else {
+    reviewInfo.email = elements.email.value.trim();
+    reviewInfo.message = elements.message.value.trim();
+
+    console.log(reviewInfo);
+
+    localStorage.removeItem('feedback-form-state');
+    form.reset();
   }
-
-  reviewInfo.email = elements.email.value.trim();
-  reviewInfo.message = elements.message.value.trim();
-
-  console.log(reviewInfo);
-
-  localStorage.removeItem('feedback-form-state');
-  form.reset();
 }
 
 function inputListenerFunction(event) {
